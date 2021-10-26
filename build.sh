@@ -17,8 +17,14 @@ check_tag_value() {
       die "expecting valid tag/branch name (value was either HEAD or not present)."
     fi
 
+    # Clean result
+    BRANCH_NAME=${BRANCH_NAME##"heads/"}
+
     export TAG_NAME="$BRANCH_NAME"
   fi
+
+  # Remove v character from tag name if present
+  TAG_NAME=${TAG_NAME##"v"}
 }
 
 die() {
