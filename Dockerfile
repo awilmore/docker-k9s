@@ -28,6 +28,7 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master
 RUN rm -rf /var/cache/apk/*
 
 # Configure image
+COPY artefacts/ /
 COPY ./entrypoint.py /app/
 
 ENTRYPOINT ["/app/entrypoint.py"]
