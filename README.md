@@ -9,7 +9,7 @@ This app runs k9s, kubectl and helm commands via a docker container.
 
 ```
 # Create an alias to simplify command line
-[ec2-user@ip-10-11-12-13 ~]$ alias docker-k9s='docker run -it --rm awilmore/k9s:latest my-cluster-name'
+[ec2-user@ip-10-11-12-13 ~]$ alias ks='docker run -it --rm awilmore/k9s:latest my-cluster-name'
 
 ```
 

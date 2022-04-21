@@ -1,0 +1,452 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  logoless: false
+  crumbsless: false
+  readOnly: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: -1
+    fullScreenLogs: false
+    textWrap: true
+    showTime: true
+  currentContext: arn:aws:eks:ap-southeast-2:813967790104:cluster/msp-rnd-cde-perf
+  currentCluster: arn:aws:eks:ap-southeast-2:813967790104:cluster/msp-rnd-cde-perf
+  clusters:
+    arn:aws:eks:ap-southeast-2:042804869326:cluster/msp-live-main-gko:
+      namespace:
+        active: ""
+        favorites:
+        - linkerd
+        - ops
+        - product
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:122709731749:cluster/msp-live-main-till:
+      namespace:
+        active: product
+        favorites:
+        - product
+        - linkerd
+        - ops
+        - all
+        - default
+      view:
+        active: dp
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:122709731749:cluster/msp-sb-main-till:
+      namespace:
+        active: ""
+        favorites:
+        - ops
+        - product
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:180548302197:cluster/msp-live-main-wbc:
+      namespace:
+        active: ""
+        favorites:
+        - kube-node-lease
+        - platform
+        - kube-system
+        - ops
+        - sumologic
+        - product
+        - linkerd
+        - all
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:180548302197:cluster/msp-sb-main-wbc:
+      namespace:
+        active: ""
+        favorites:
+        - kube-system
+        - sumologic
+        - linkerd
+        - product
+        - all
+        - default
+      view:
+        active: ctx
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:196655710609:cluster/msp-dev-main-eng:
+      namespace:
+        active: product
+        favorites:
+        - ops
+        - all
+        - product
+        - cattle-monitoring-system
+        - cattle-system
+        - twistlock
+        - linkerd
+        - datadog
+        - sumologic
+      view:
+        active: jobs
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:196655710609:cluster/msp-qa-main-eng:
+      namespace:
+        active: product
+        favorites:
+        - sumologic
+        - datadog
+        - ops
+        - product
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:371374232411:cluster/msp-live-cde-gko:
+      namespace:
+        active: ops
+        favorites:
+        - ops
+        - product
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:377559948077:cluster/msp-dev-cde-eng:
+      namespace:
+        active: product
+        favorites:
+        - twistlock
+        - kube-system
+        - ops
+        - platform
+        - sumologic
+        - linkerd
+        - ssm-secrets-webhook
+        - product
+        - all
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:377559948077:cluster/msp-qa-cde-eng:
+      namespace:
+        active: ops
+        favorites:
+        - ops
+        - product
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:567505611260:cluster/dt-live-ops-shared:
+      namespace:
+        active: ""
+        favorites:
+        - data
+        - ops
+        - platform
+        - sonar
+        - default
+      view:
+        active: ctx
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:567505611260:cluster/haystack-live-ops-shared:
+      namespace:
+        active: wazuh
+        favorites:
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:734169289386:cluster/msp-sb-main-cba:
+      namespace:
+        active: product
+        favorites:
+        - product
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:813967790104:cluster/msp-load-cde-perf:
+      namespace:
+        active: product
+        favorites:
+        - datadog
+        - monitoring
+        - nginx-ingress
+        - ssm-secrets-webhook
+        - linkerd
+        - platform
+        - kube-system
+        - all
+        - product
+      view:
+        active: dp
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:813967790104:cluster/msp-rnd-cde-perf:
+      namespace:
+        active: product
+        favorites:
+        - product
+        - all
+        - sumologic
+        - default
+        - ssm-secrets-webhook
+        - platform
+        - ops
+        - linkerd
+      view:
+        active: jobs
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:918207991278:cluster/msp-load-main-perf:
+      namespace:
+        active: ""
+        favorites:
+        - platform
+        - kube-system
+        - linkerd
+        - influxdb
+        - datadog
+        - all
+        - product
+        - sumologic
+        - datatools
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:932261129991:cluster/msp-live-cde-wbc:
+      namespace:
+        active: ""
+        favorites:
+        - datadog
+        - product
+        - all
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:932261129991:cluster/msp-sb-cde-wbc:
+      namespace:
+        active: ""
+        favorites:
+        - kube-system
+        - all
+        - product
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    kind-cluster-1:
+      namespace:
+        active: ""
+        favorites:
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
