@@ -46,6 +46,8 @@ echo
 echo " * Building k9s image version: $TAG_NAME ..."
 echo
 
+docker pull derailed/k9s:latest
+
 docker buildx build \
   -t awilmore/k9s:latest \
   -t awilmore/k9s:$TAG_NAME \
