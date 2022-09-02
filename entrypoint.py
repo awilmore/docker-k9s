@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 import sys
 import signal
 import subprocess
@@ -9,7 +10,8 @@ import subprocess
 # GLOBALS
 ###
 
-AWS_REGION  = 'ap-southeast-2'
+AWS_REGION       = 'ap-southeast-2'
+AWS_EKS_REQUIRED = 'AWS_EKS_REQUIRED'
 
 
 ###
@@ -20,8 +22,11 @@ def main():
     # Check args
     cluster_name, command_line = check_args()
 
-    # Configure access to cluster
-    update_kube_config(cluster_name)
+    # Check whether to configure access
+    if aws_access_required():
+
+        # Configure access to cluster
+        update_kube_config(cluster_name)
 
     # Execute
     execute_command(command_line)
@@ -40,6 +45,11 @@ def usage():
     print(f'       {script_name} cluster_name "k9s"')
     print(f'       {script_name} cluster_name "kubectl get nodes"')
     print(f'       {script_name} cluster_name "helm -n product list"')
+    print()
+    print('note:')
+    print('        use AWS_EKS_REQUIRED env var to perform eks login on startup')
+    print()
+
     sys.exit(1)
 
 
@@ -55,6 +65,10 @@ def check_args():
 
     return cluster_name, command_line
 
+
+# Check for instruction to perform aws login
+def aws_access_required():
+    return os.getenv(AWS_EKS_REQUIRED) == "True"
 
 
 # Cluster login

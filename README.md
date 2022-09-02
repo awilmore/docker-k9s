@@ -11,6 +11,9 @@ This app runs k9s, kubectl and helm commands via a docker container.
 # Create an alias to simplify command line
 [ec2-user@ip-10-11-12-13 ~]$ alias ks='docker run -it --rm awilmore/k9s:latest my-cluster-name'
 
+# Or to perform eks login on startup
+[ec2-user@ip-10-11-12-13 ~]$ alias ks='docker run -it --rm -e AWS_EKS_REQUIRED=True awilmore/k9s:latest my-cluster-name'
+
 ```
 
 ```
