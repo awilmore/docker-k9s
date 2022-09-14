@@ -24,6 +24,13 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master
       chmod +x get_helm.sh && \
       ./get_helm.sh
 
+# Install gcloud
+RUN curl -sSL https://sdk.cloud.google.com | bash
+ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
+
+# Install auth plugin
+RUN gcloud components install gke-gcloud-auth-plugin
+
 # Clean up
 RUN rm -rf /var/cache/apk/*
 
