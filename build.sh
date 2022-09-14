@@ -49,6 +49,7 @@ echo
 docker pull derailed/k9s:latest
 
 docker buildx build \
+  --progress plain \
   -t awilmore/k9s:latest \
   -t awilmore/k9s:$TAG_NAME \
   . --load
